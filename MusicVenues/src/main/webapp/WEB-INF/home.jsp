@@ -12,7 +12,18 @@
 
 <h1>JPA Music Venues</h1>
 
-${venueList}
+<form action="getVenue.do" method="GET">
+  Venue ID: <input type="text" name="id" />
+  <input type="submit" value="Show Venue" />
+</form>
+
+<ul>
+<c:forEach var="musicvenue" items="${musicvenuedb}">
+	<li>${musicvenue.title}</li>
+</c:forEach>
+
+
+</ul>
 
 </body>
 </html>

@@ -19,6 +19,7 @@ public class MusicVenueDAOImpl implements MusicVenueDAO {
 
 	@Override
 	public MusicVenue findById(int venueId) {
+		System.out.println(venueId);
 		return em.find(MusicVenue.class, venueId);
 	}
 
@@ -31,7 +32,6 @@ public class MusicVenueDAOImpl implements MusicVenueDAO {
 
 	@Override
 	public MusicVenue create(MusicVenue newVenue) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 

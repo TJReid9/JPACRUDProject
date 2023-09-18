@@ -53,6 +53,8 @@ class MusicVenueTest {
 	void test_MusicVenue_entity_mapping() {
 		assertNotNull(venue);
 		assertEquals("Mishawaka Amphitheater", venue.getName());
+		assertEquals("Fox Theater", venue.getName());
+		assertEquals("Fox Theater", venue.getName());
 	}
 
 }
