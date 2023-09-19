@@ -17,15 +17,15 @@ public class MusicVenueController {
 	@Autowired
 	private MusicVenueDAO venueDao;
 	
-	@RequestMapping(path = {"/", "home.do"})
-	public String goHome(Model model) {
+	@RequestMapping(path = {"/", "index.do"})
+	public String index(Model model) {
 		List<MusicVenue> venues = venueDao.findAll();
-		model.addAttribute("venues", venues);
-		return "home";
+		model.addAttribute("musicvenues", venues);
+		return "index";
 	}
 	
 	@RequestMapping(path = "getVenue.do")
-	public String getVenue(@RequestParam int id, Model model) {
+	public String getVenue(@RequestParam Integer id, Model model) {
 		MusicVenue venue = venueDao.findById(id);
 		return "test";
 	}

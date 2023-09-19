@@ -19,9 +19,12 @@ public class MusicVenue {
 	
 	@Column(name = "image_url")
 	private String imageURL;
+	
+	@Column(name = "description")
+	private String description;
 
 	public MusicVenue() {
-		super();
+		
 	}
 
 	public int getId() {
@@ -46,6 +49,14 @@ public class MusicVenue {
 	
 	public void setImageURL(String imageURL) {
 		this.imageURL = imageURL;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 	@Override

@@ -8,3 +8,6 @@
  */
 
 rootProject.name = 'JPAMusicVenues'
+
+
+includeFlat 'MusicVenues'

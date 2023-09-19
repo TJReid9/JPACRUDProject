@@ -28,7 +28,7 @@ class MusicVenueTest {
 
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
-		emf = Persistence.createEntityManagerFactory("JPAMusicVenues");
+		emf = Persistence.createEntityManagerFactory("MusicVenues");
 		
 	}
 
@@ -54,7 +54,7 @@ class MusicVenueTest {
 		assertNotNull(venue);
 		assertEquals("Mishawaka Amphitheater", venue.getName());
 		assertEquals("Fox Theater", venue.getName());
-		assertEquals("Fox Theater", venue.getName());
+		assertEquals("The Fillmore Auditorium", venue.getName());
 	}
 
 }
