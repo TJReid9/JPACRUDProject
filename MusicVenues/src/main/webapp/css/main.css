@@ -1,0 +1,19 @@
+@charset "UTF-8";@charset "UTF-8";
+
+body {
+	background-color: lightgray;
+}
+
+.container {
+	padding-top: 64px;
+}
+/*
+table {
+	border: solid black 1px;
+	border-spacing: 0px;
+}
+
+th, td {
+	border: solid black 1px;	
+}
+*/
