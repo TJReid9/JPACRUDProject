@@ -34,7 +34,7 @@ public class MusicVenueDAOImpl implements MusicVenueDAO {
 
 	@Override
 	public MusicVenue create(MusicVenue newVenue) {
-		
+
 		em.persist(newVenue);
 		em.flush();
 		em.close();
@@ -48,13 +48,15 @@ public class MusicVenueDAOImpl implements MusicVenueDAO {
 		MusicVenue dbMV = em.find(MusicVenue.class, updateVenue.getId());
 		dbMV.setName(updateVenue.getName());
 		
-
-		
-	return null;}
+		em.close();
+		return updateVenue;
+	}
 
 	@Override
 	public boolean deleteById(int deleteVenue) {
-//		MusicVenue mvToDelete = em.find(MusicVenue.class, deleteVenue.getId())
+		MusicVenue mvToDelete = em.find(MusicVenue.class, deleteVenue);
+		em.remove(mvToDelete);
+		em.close();
 		return false;
 	}
 

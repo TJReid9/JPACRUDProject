@@ -23,21 +23,31 @@
 			MusicVenue ID: <input type="text" name="id" /> <input type="submit"
 				value="Show Venue" />
 		</form>
+		
+		<table class="table table-striped table-hover">
+	
+		<thead class="table-dark">
+			<tr>
+				<th>Id</th>
+				<th>Name</th>
+			</tr>
+		</thead>
 
-		<ul>
+		<tbody>
 
 			<c:forEach var="musicvenue" items="${musicvenues}">
-				<li><a href="getVenue.do?id=${musicvenue.id}">${musicvenue.name}</a>
-				</li>
-
-
+			<tr>
+				<td>${musicvenue.id}</td>
+				<td><a href="getVenue.do?id=${musicvenue.id}">${musicvenue.name}</a></td>
+				</tr>
 
 			</c:forEach>
-		</ul>
+		</tbody>
 
-
+		</table>
 
 	</div>
-
+	
+	<jsp:include page="bootstrapFoot.jsp" />
 </body>
 </html>
