@@ -15,7 +15,7 @@
 
 		<h1>Colorado MusicVenues</h1>
 
-		<form action="index.do" method="GET">
+		<form action="getVenue.do" method="GET">
 			MusicVenue ID: <input type="text" name="id" /> <input type="submit"
 				value="Show Venue" />
 		</form>

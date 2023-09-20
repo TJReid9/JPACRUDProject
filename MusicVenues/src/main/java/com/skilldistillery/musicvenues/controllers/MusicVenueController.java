@@ -27,7 +27,8 @@ public class MusicVenueController {
 	@RequestMapping(path = "getVenue.do")
 	public String getVenue(@RequestParam Integer id, Model model) {
 		MusicVenue venue = venueDao.findById(id);
-		return "test";
+		model.addAttribute("musicvenue", venue);
+		return "venueDetails";
 	}
 	
 	

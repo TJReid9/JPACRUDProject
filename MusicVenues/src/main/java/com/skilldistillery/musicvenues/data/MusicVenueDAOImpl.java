@@ -34,13 +34,10 @@ public class MusicVenueDAOImpl implements MusicVenueDAO {
 
 	@Override
 	public MusicVenue create(MusicVenue newVenue) {
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("MusicVenue");
-		EntityManager em = emf.createEntityManager();
-
-		em.getTransaction().begin();
+		
 		em.persist(newVenue);
 		em.flush();
-		em.getTransaction().commit();
+		em.close();
 
 		return newVenue;
 
@@ -48,20 +45,16 @@ public class MusicVenueDAOImpl implements MusicVenueDAO {
 
 	@Override
 	public MusicVenue update(MusicVenue updateVenue) {
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("MusicVenue");
-		EntityManager em = emf.createEntityManager();
+		MusicVenue dbMV = em.find(MusicVenue.class, updateVenue.getId());
+		dbMV.setName(updateVenue.getName());
 		
-		em.getTransaction().begin();
-		em.persist(updateVenue);
-		em.flush();
-		em.getTransaction().commit();
-		
+
 		
 	return null;}
 
 	@Override
-	public boolean deleteById(int venueId) {
-		// TODO Auto-generated method stub
+	public boolean deleteById(int deleteVenue) {
+//		MusicVenue mvToDelete = em.find(MusicVenue.class, deleteVenue.getId())
 		return false;
 	}
 

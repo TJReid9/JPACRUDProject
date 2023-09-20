@@ -17,8 +17,8 @@
 	<h2>MusicVenue</h2>
 
 	<c:choose>
-		<c:when test="${empty musicvenuedb}">
-			<h1>Music Venue Not Found.</h1>
+		<c:when test="${empty musicvenue}">
+			<h1> Venue Not Found.</h1>
 		</c:when>
 		<c:otherwise>
 			<div>
