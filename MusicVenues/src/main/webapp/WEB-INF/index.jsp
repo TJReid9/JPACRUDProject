@@ -45,6 +45,14 @@
 		</tbody>
 
 		</table>
+		<h1>Form for adding MusicVenue</h1>
+	
+	<form action="addVenue.do" method="post">
+	<span>Name:</span>
+	<input type="text" name="name" >
+	<button>Add</button>
+	</form>
+	<br>
 
 	</div>
 	

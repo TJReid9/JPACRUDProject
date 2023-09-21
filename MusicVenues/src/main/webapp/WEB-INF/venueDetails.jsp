@@ -24,7 +24,29 @@
 		</c:when>
 		<c:otherwise>
 			<div>
+
 				<h5>${musicvenue.id}(${musicvenue.name})</h5>
+
+				<form action="addVenue.do" method="post">
+					<input type="submit" value="Add Venue">
+				</form>
+
+				<h1>Form for Updating Venue</h1>
+
+				<form action="updateVenue.do" method="get">
+					<span>Name: </span> <input type="text" name="name"
+						value="${musicvenue.name}"> <input type="hidden" name="id"
+						value="${musicvenue.id}"> <input type="submit"
+						value="Update Venue">
+					
+					<br>
+				</form>
+
+
+				<form action="deleteVenue.do" method="post">
+					<input type="hidden" name="id" value="${musicvenue.id}"> <input
+						type="submit" value="Delete Venue">
+				</form>
 			</div>
 		</c:otherwise>
 	</c:choose>

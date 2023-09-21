@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.skilldistillery.musicvenues.data.MusicVenueDAO;
 import com.skilldistillery.musicvenues.entities.MusicVenue;
@@ -31,7 +32,29 @@ public class MusicVenueController {
 		return "venueDetails";
 	}
 	
+	@RequestMapping(path = "addVenue.do")
+	public ModelAndView addVenue(MusicVenue venue) {
+		MusicVenue added = venueDao.create(venue);
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("addVenue");
+
+		return mv;
+	}
 	
+	@RequestMapping(path = "updateVenue.do")
+	public ModelAndView updateVenue(MusicVenue venue) {
+		MusicVenue update = venueDao.update(venue);
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("index");
+		
+		return mv;
+	}
+	
+	@RequestMapping(path = "deleteVenue.do")
+	public String deleteVenue(@RequestParam Integer id, Model model) {
+		model.addAttribute("musicvenue", venueDao.deleteById(id));
+		return "deleteVenue";
+	}
 	
 	
 }

@@ -8,8 +8,8 @@ public interface MusicVenueDAO {
 	
 	MusicVenue findById(int venueId);
 	List<MusicVenue> findAll();
-	MusicVenue create(MusicVenue newVenue);
-	MusicVenue update(MusicVenue newVenue);
+	MusicVenue create(MusicVenue addVenue);
+	MusicVenue update(MusicVenue updateVenue);
 	boolean deleteById(int venueId);
 
 }

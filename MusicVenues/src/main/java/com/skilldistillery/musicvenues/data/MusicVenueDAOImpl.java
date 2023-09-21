@@ -33,13 +33,14 @@ public class MusicVenueDAOImpl implements MusicVenueDAO {
 	}
 
 	@Override
-	public MusicVenue create(MusicVenue newVenue) {
+	public MusicVenue create(MusicVenue addVenue) {
+		String jpql = "INSERT INTO musicvenuedb (music_venue) VALUE (?,?)";
 
-		em.persist(newVenue);
+		em.persist(addVenue);
 		em.flush();
 		em.close();
 
-		return newVenue;
+		return addVenue;
 
 	}
 
@@ -48,6 +49,7 @@ public class MusicVenueDAOImpl implements MusicVenueDAO {
 		MusicVenue dbMV = em.find(MusicVenue.class, updateVenue.getId());
 		dbMV.setName(updateVenue.getName());
 		
+		em.flush();
 		em.close();
 		return updateVenue;
 	}
