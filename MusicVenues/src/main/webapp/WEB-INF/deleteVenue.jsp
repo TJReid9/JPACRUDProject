@@ -15,6 +15,9 @@
 		<input type="text" name="deleteVenue" value="${musicvenue.id}">
 		<br>
 		</form>
+		<br>
+		<br>
+		<a href="/">Back to Home</a>
 
 </body>
 </html>

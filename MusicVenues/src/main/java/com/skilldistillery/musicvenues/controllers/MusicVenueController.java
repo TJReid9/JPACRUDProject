@@ -52,7 +52,8 @@ public class MusicVenueController {
 	
 	@RequestMapping(path = "deleteVenue.do")
 	public String deleteVenue(@RequestParam Integer id, Model model) {
-		model.addAttribute("musicvenue", venueDao.deleteById(id));
+//		model.addAttribute("musicvenue", venueDao.deleteById(id));
+		venueDao.deleteById(id);
 		return "deleteVenue";
 	}
 	

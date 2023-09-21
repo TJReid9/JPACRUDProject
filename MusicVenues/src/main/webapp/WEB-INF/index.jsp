@@ -17,9 +17,9 @@
 
 	<div class="container">
 
-		<h1>Colorado Music Venues</h1>
+		<h1 style="margin-top: 25px; margin-bottom: 25px">Colorado Music Venues</h1>
 
-		<form action="getVenue.do" method="GET">
+		<form action="getVenue.do" method="GET" style="{margin: 10px 0px}">
 			MusicVenue ID: <input type="text" name="id" /> <input type="submit"
 				value="Show Venue" />
 		</form>

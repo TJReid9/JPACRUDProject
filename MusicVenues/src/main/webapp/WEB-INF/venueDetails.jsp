@@ -25,12 +25,9 @@
 		<c:otherwise>
 			<div>
 
-				<h5>${musicvenue.id}(${musicvenue.name})</h5>
+				<h5 style="margin-top: 30px; font-size: 40px">${musicvenue.id}(${musicvenue.name})</h5>
 
-				<form action="addVenue.do" method="post">
-					<input type="submit" value="Add Venue">
-				</form>
-
+				
 				<h1>Form for Updating Venue</h1>
 
 				<form action="updateVenue.do" method="get">

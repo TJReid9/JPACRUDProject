@@ -8,7 +8,7 @@
 <title>Add MusicVenue</title>
 </head>
 <body>
-
+		<h1>Venue Added!</h1>
 	
 	<%-- <span>Description:</span>
 	<input type="text" name="venueName" value="${musicvenue.name}"> --%>
@@ -17,7 +17,7 @@
 	
 	<br>
 	<br>
-	<a href="index.jsp">Back to Home</a>
+	<a href="/">Back to Home</a>
 
 </body>
 </html>
