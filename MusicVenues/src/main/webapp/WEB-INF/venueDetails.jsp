@@ -25,18 +25,21 @@
 		<c:otherwise>
 			<div>
 
-				<h5 style="margin-top: 30px; font-size: 40px">${musicvenue.id}(${musicvenue.name}${musicvenue.location})</h5>
+				<h5 style="margin-top: 30px; font-size: 40px">${musicvenue.id}(${musicvenue.name} <br> ${musicvenue.location})</h5>
 
 				
-				<h1>Form for Updating Venue</h1>
+				<h1>Update Venue</h1>
 
 				<form action="updateVenue.do" method="get">
 				
      			 <input type="hidden" name="id" value="${musicvenue.id}"> 
-     			 <label for="name">Name</label>
+     			
+     			 <label for="name">Name:</label>
      			 <input type="text" name="name" value="${musicvenue.name}"> 
      			 <label for="location">Location:</label>
     			  <input type="text" name="location" value="${musicvenue.location}"> 
+    			  <label for="description">Description:</label>
+    			  <input type="text" name="description" value="${musicvenue.description}">
      			 <input type="submit" value="Update Venue">
 					<br>
 				</form>

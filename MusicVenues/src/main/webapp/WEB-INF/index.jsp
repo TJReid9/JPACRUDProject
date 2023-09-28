@@ -23,7 +23,7 @@
 		<form action=""></form>
 
 		<form action="getVenue.do" method="GET" style="margin: 10px 0px">
-			MusicVenue ID: <input type="text" name="id" /> <input type="submit"
+			Venue ID: <input type="text" name="id" /> <input type="submit"
 				value="Show Venue" />
 		</form>
 
@@ -41,7 +41,7 @@
 				<c:forEach var="musicvenue" items="${musicvenues}">
 					<tr>
 						<td>${musicvenue.id}</td>
-						<td><a href="getVenue.do?id=${musicvenue.id}">${musicvenue.name}     ${musicvenue.location}</a></td>
+						<td><a href="getVenue.do?id=${musicvenue.id}">${musicvenue.name} <br>${musicvenue.location}</a></td>
 					</tr>
 
 				</c:forEach>

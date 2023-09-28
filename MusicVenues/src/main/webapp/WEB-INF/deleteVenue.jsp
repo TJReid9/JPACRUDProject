@@ -8,12 +8,10 @@
 </head>
 <body>
 
-	<h1>Form to Delete Venue</h1>
+	<h1>Venue Deleted</h1>
 	
 	<form action="deleteVenue.do" method="get">
-		<span>Name: </span>
-		<input type="text" name="deleteVenue" value="${musicvenue.id}">
-		<br>
+		
 		</form>
 		<br>
 		<br>
