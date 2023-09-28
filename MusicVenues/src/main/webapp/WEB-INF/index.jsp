@@ -17,45 +17,47 @@
 
 	<div class="container">
 
-		<h1 style="margin-top: 25px; margin-bottom: 25px">Colorado Music Venues</h1>
+		<h1 style="margin-top: 25px; margin-bottom: 25px">Colorado Music
+			Venues</h1>
 
-		<form action="getVenue.do" method="GET" style="{margin: 10px 0px}">
+		<form action=""></form>
+
+		<form action="getVenue.do" method="GET" style="margin: 10px 0px">
 			MusicVenue ID: <input type="text" name="id" /> <input type="submit"
 				value="Show Venue" />
 		</form>
-		
+
 		<table class="table table-striped table-hover">
-	
-		<thead class="table-dark">
-			<tr>
-				<th>Id</th>
-				<th>Name</th>
-			</tr>
-		</thead>
 
-		<tbody>
-
-			<c:forEach var="musicvenue" items="${musicvenues}">
-			<tr>
-				<td>${musicvenue.id}</td>
-				<td><a href="getVenue.do?id=${musicvenue.id}">${musicvenue.name}</a></td>
+			<thead class="table-dark">
+				<tr>
+					<th>Id</th>
+					<th>Name</th>
 				</tr>
+			</thead>
 
-			</c:forEach>
-		</tbody>
+			<tbody>
+
+				<c:forEach var="musicvenue" items="${musicvenues}">
+					<tr>
+						<td>${musicvenue.id}</td>
+						<td><a href="getVenue.do?id=${musicvenue.id}">${musicvenue.name}     ${musicvenue.location}</a></td>
+					</tr>
+
+				</c:forEach>
+			</tbody>
 
 		</table>
-		<h1>Form for adding MusicVenue</h1>
-	
-	<form action="addVenue.do" method="post">
-	<span>Name:</span>
-	<input type="text" name="name" >
-	<button>Add</button>
-	</form>
-	<br>
+		<h1>Add Venue</h1>
+
+		<form action="addVenue.do" method="post">
+			<span>Name:</span> <input type="text" name="name">
+			<button>Add</button>
+		</form>
+		<br>
 
 	</div>
-	
+
 	<jsp:include page="bootstrapFoot.jsp" />
 </body>
 </html>

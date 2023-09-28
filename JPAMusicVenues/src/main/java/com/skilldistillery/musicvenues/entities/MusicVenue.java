@@ -17,6 +17,8 @@ public class MusicVenue {
 	
 	private String name;
 	
+	private String location;
+	
 	@Column(name = "image_url")
 	private String imageURL;
 	
@@ -43,6 +45,14 @@ public class MusicVenue {
 		this.name = name;
 	}
 	
+	public String getLocation() {
+		return location;
+	}
+
+	public void setLocation(String location) {
+		this.location = location;
+	}
+
 	public String getImageURL() {
 		return imageURL;
 	}

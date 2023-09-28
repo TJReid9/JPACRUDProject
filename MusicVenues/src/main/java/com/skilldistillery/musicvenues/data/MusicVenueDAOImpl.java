@@ -38,7 +38,7 @@ public class MusicVenueDAOImpl implements MusicVenueDAO {
 
 		em.persist(addVenue);
 		em.flush();
-		em.close();
+		
 
 		return addVenue;
 
@@ -48,9 +48,10 @@ public class MusicVenueDAOImpl implements MusicVenueDAO {
 	public MusicVenue update(MusicVenue updateVenue) {
 		MusicVenue dbMV = em.find(MusicVenue.class, updateVenue.getId());
 		dbMV.setName(updateVenue.getName());
+		dbMV.setLocation(updateVenue.getLocation());
 		
 		em.flush();
-		em.close();
+		
 		return updateVenue;
 	}
 
@@ -58,7 +59,7 @@ public class MusicVenueDAOImpl implements MusicVenueDAO {
 	public boolean deleteById(int deleteVenue) {
 		MusicVenue mvToDelete = em.find(MusicVenue.class, deleteVenue);
 		em.remove(mvToDelete);
-		em.close();
+		
 		return false;
 	}
 

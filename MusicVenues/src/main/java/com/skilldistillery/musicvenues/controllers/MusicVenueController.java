@@ -43,6 +43,7 @@ public class MusicVenueController {
 	
 	@RequestMapping(path = "updateVenue.do")
 	public ModelAndView updateVenue(MusicVenue venue) {
+		System.out.println("*************" + venue);
 		MusicVenue update = venueDao.update(venue);
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("index");
