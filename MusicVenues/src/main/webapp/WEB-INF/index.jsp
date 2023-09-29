@@ -30,10 +30,7 @@
 		<table class="table table-striped table-hover">
 
 			<thead class="table-dark">
-				<tr>
-					<th>Id</th>
-					<th>Name</th>
-				</tr>
+				
 			</thead>
 
 			<tbody>

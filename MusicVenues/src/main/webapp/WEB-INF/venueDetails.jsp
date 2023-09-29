@@ -44,7 +44,7 @@
 					<br>
 				</form>
 
-
+				<br>
 				<form action="deleteVenue.do" method="post">
 					<input type="hidden" name="id" value="${musicvenue.id}"> <input
 						type="submit" value="Delete Venue">

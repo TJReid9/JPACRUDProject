@@ -18,7 +18,7 @@
 	<input type="text" name="venueDescription" value="${musicvenue.description}"> 
 	
 	<br>
-	
+	<input type="submit" value="Update Venue">
 	<br>
 	<br>
 	<a href="/">Back to Home</a>
