@@ -49,6 +49,7 @@ public class MusicVenueDAOImpl implements MusicVenueDAO {
 		MusicVenue dbMV = em.find(MusicVenue.class, updateVenue.getId());
 		dbMV.setName(updateVenue.getName());
 		dbMV.setLocation(updateVenue.getLocation());
+		dbMV.setDescription(updateVenue.getDescription());
 		
 		em.flush();
 		

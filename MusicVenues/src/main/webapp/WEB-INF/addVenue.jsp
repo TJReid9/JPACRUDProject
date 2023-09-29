@@ -10,11 +10,15 @@
 <body>
 		<h1>Venue Added!</h1>
 	
-	<%-- <span>Description:</span>
-	<input type="text" name="venueName" value="${musicvenue.name}"> --%>
+	<label>Location:</label>
+	<input type="text" name="venueLocation" value="${musicvenue.location}"> 
 	<br>
 	<br>
+	<label>Description:</label>
+	<input type="text" name="venueDescription" value="${musicvenue.description}"> 
 	
+	<br>
+	<input type="submit" value="Update Venue">
 	<br>
 	<br>
 	<a href="/">Back to Home</a>
